@@ -1,0 +1,121 @@
+*{
+    scroll-behavior: smooth;   
+}
+
+@keyframes hidePreloader {
+    0% {
+        width: 100%;
+        height: 100%;
+    }
+
+    100% {
+        width: 0;
+        height: 0;
+    }
+}
+
+body>div.preloader {
+            position: fixed;
+            background: white;
+            width: 100%;
+            height: 100%;
+            z-index: 1071;
+            opacity: 0;
+            transition: opacity .5s ease;
+            overflow: hidden;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+}
+
+        body:not(.loaded)>div.preloader {
+            opacity: 1;
+        }
+
+        body:not(.loaded) {
+            overflow: hidden;
+        }
+
+        body.loaded>div.preloader {
+            animation: hidePreloader .5s linear .5s forwards;
+        }
+
+
+        /*  */
+        .text-salmon {
+            color: salmon;
+        }
+
+        .img-keunggulan {
+            height: 150px ;
+        }
+
+        .gray-background {
+            background-color: #fafbfe
+        }
+
+        .list {
+            list-style-type: none;
+        }
+
+        .check-size {
+            font-size: 20px;
+        }
+
+        .img-testi{
+            width: 300px;
+        }
+
+        .line-tr{
+            text-decoration: line-through;
+        }
+        .fix-button {
+            background-color: #fafbfe; 
+            width: 95%; 
+            height: 50px; 
+            position: fixed; 
+            z-index: 999999999; 
+            bottom: 0;
+            margin-bottom: 5px;
+            margin-left: 2.5%;
+
+        }
+
+        .diskon-button {
+            width: 25%;
+        }
+
+        .navbar {
+            background: rgb(252,224,220);
+            background: linear-gradient(82deg, rgba(252,224,220,1) 45%, rgba(250,152,141,1) 100%);
+        }
+
+        .main {
+            background: rgb(252,224,220);
+            background: linear-gradient(82deg, rgba(252,224,220,1) 45%, rgba(250,152,141,1) 100%);
+        }
+        .kandungan {
+            background: rgb(255,219,215);
+            background: linear-gradient(299deg, rgba(255,219,215,1) 0%, rgba(255,255,255,1) 53%, rgba(255,217,213,1) 100%);   
+        }
+
+        .manfaat {
+            background: rgb(255,219,215);
+            background: linear-gradient(299deg, rgba(255,219,215,1) 0%, rgba(255,255,255,1) 53%, rgba(255,217,213,1) 100%);
+        }
+
+        footer {
+            padding-bottom: 55px;
+        }
+        /*  */
+
+        @media only screen and (max-width: 850px){
+            .fix-button{
+                height: 55px;
+            }
+
+            .diskon-button{
+                width: 80%;
+            }
+        }
